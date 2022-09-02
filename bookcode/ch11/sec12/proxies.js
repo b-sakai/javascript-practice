@@ -32,6 +32,7 @@ const p = Proxy.revocable(target, {})
 
 makeOlder(p.proxy)
 console.log('target:', target) // { name: 'Harry', age: 43 }
+console.log('proxy:', p) // { name: 'Harry', age: 43 }
 
 p.revoke() // p.proxy is no longer usable
 
